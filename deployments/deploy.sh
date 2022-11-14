@@ -1,4 +1,4 @@
-kubectl apply -f aws-secret.yaml
+kubectl apply -f aws-credentials.yaml
 kubectl apply -f env-secret.yaml
 kubectl apply -f env-configmap.yaml
 
@@ -15,5 +15,5 @@ kubectl apply -f frontend-service.yaml
 kubectl expose deployment frontend --type=LoadBalancer --name=publicfrontend
 kubectl expose deployment reverseproxy --type=LoadBalancer --name=publicreverseproxy
 
-kubectl delete --all service
+kubectl delete --all service 
 kubectl delete --all deployment
